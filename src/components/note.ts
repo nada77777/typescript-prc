@@ -20,5 +20,6 @@ export class NoteComponent {
 
     attatchTo(parent: HTMLElement, position: InsertPosition = 'afterbegin'){
         parent.insertAdjacentElement(position, this.element);
+        console.log(this.element);
     }
 }

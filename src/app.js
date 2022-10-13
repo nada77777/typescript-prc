@@ -6,19 +6,24 @@ class App {
             var _a;
             (_a = this.button) === null || _a === void 0 ? void 0 : _a.addEventListener('click', () => {
                 console.log('button click');
-                console.log('callBack', typeof (callBack));
-                callBack();
+                console.log(callBack);
+                callBack(this.app);
+                // console.log(this.app);
             });
             // console.log('cccccccccccccccccccccccccccccccccccccccccc');
         };
         this.page = new PageComponent();
         this.page.attatchTo(appRoot);
-        this.popup = new PopUpComponent('ss', 'aaa');
+        this.app = appRoot;
+        // this.popup = new PopUpComponent('ss','aaa');
+        this.popup = new PopUpComponent();
         this.button = document.querySelector('#new-image');
-        console.log(this.button);
+        console.log(this.popup);
         this.caller = this.popup.attachTo.bind(this.popup);
-        console.log(this.caller);
-        this.click(this.caller(appRoot));
+        // console.log(this.caller);
+        // this.click(this.caller(appRoot));
+        // console.log('attatchTo',this.popup.attachTo.bind(this.popup));
+        this.click(this.caller);
     }
 }
 new App(document.querySelector('.document'));

@@ -6,3 +6,5 @@
     "noEmitOnError": true, 컴파일시 에러 존재 더 이상 진행ㄴㄴ
 
     script defer js 파일 비동기적으로 받아오기위해
+
+     Maximum call stack size exceeded 뭘까?
